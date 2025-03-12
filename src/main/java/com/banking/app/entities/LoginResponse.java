@@ -3,6 +3,7 @@ package com.banking.app.entities;
 public class LoginResponse {
     private String token;
     private long expiresIn;
+    public static int a=0;
 
     public LoginResponse(Builder builder){
         this.token = builder.token;

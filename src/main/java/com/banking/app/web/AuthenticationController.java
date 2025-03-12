@@ -11,7 +11,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/api/auth/")
 public class AuthenticationController {
@@ -51,6 +50,11 @@ public class AuthenticationController {
                LOGGER.error("Error registering the user into database, duplicate username: {} ",registerUserRequest.getUsername());
                return ResponseEntity.internalServerError().build();
            }
+    }
+
+    @GetMapping("/hello")
+    public void hello(){
+        System.out.println("Hello");
     }
 
 }
